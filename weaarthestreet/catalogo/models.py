@@ -4,8 +4,8 @@ import uuid  #se utiliza para definir atributos claves o la PK
 
 # Create your models here.
 
-class Genero(models.Model):
-        marca = models.CharField(max_length=50, help_text='Ingrese si es para hombre, mujer o unisex')
+class Marca(models.Model):
+        marca = models.CharField(max_length=100, help_text='Ingrese la marca y el tipo de producto EJ: Nike, Zapatilla; adidas, poleron')
         
     
         def __str__(self):
@@ -17,7 +17,7 @@ class Producto(models.Model):
 	    precio=models.CharField(max_length=50)
         
 	    descripcion = models.TextField(max_length=1000, help_text='Ingrese una descripcion')
-	    marca=models.ManyToManyField(Genero)
+	    marca=models.ManyToManyField(Marca)
         
        
 
