@@ -20,7 +20,7 @@
 <body>
 <!-- NavBar -->
 <nav class="navbar navbar-expand-md navbar-dark" id="osito">
-    <a class="navbar-brand alerta" href="Pagina1.html" id="P"> Wear The Street</a>
+    <a class="navbar-brand alerta" href="{% url 'index' %}" id="P"> Wear The Street</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -34,9 +34,9 @@
             Hombre
           </a>
           <div class="dropdown-menu" >
-            <a class="dropdown-item alerta" href="zapatillas-hombres.html">Zapatillas</a>
-            <a class="dropdown-item alerta" href="ropa-hombre.html">Vestuario</a>
-            <a class="dropdown-item alerta" href="Accesorios.html">Accesorios</a>
+            <a class="dropdown-item alerta" href="{% url 'zapatilla_hombre' %}">Zapatillas</a>
+            <a class="dropdown-item alerta" href="{% url 'ropa_hombre' %}">Vestuario</a>
+            <a class="dropdown-item alerta" href="{% url 'accesorios' %}">Accesorios</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -44,13 +44,13 @@
             Mujer
           </a>
           <div class="dropdown-menu" >
-            <a class="dropdown-item alerta" href="zapatillas-mujer.html">Zapatillas</a>
+            <a class="dropdown-item alerta" href="{% url 'zapatilla_mujer' %}">Zapatillas</a>
             <a class="dropdown-item" href="#">Vestuario</a>
-            <a class="dropdown-item alerta" href="Accesorios.html">Accesorios</a>
+            <a class="dropdown-item alerta" href="{% url 'accesorios' %}">Accesorios</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link alerta" href="Accesorios.html" id="P">Accesorio</a>
+          <a class="nav-link alerta" href="{% url 'accesorios' %}" id="P">Accesorio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link alerta" href="contacto.html" id="P">Contacto</a>

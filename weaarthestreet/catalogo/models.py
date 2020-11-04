@@ -15,22 +15,17 @@ class Marca(models.Model):
 			
 
 class Producto(models.Model):
-    
-	    nombre = models.CharField(max_length=100)
-	    precio=models.CharField(max_length=50)
-        
-	    descripcion = models.TextField(max_length=1000, help_text='Ingrese una descripcion')
-	    marca=models.ManyToManyField(Marca)	
-		
-		
-		
-        
-       
-
+	id=models.IntegerField(primary_key=True)
+	nombre = models.CharField(max_length=20)
+	precio=models.CharField(max_length=50)
+	descripcion = models.TextField(max_length=1000, help_text='Ingrese una descripcion')
+	marca=models.ManyToManyField(Marca)	
 	
-	    def __str__(self):
-		    return self.nombre
-    
-	    def get_absolute_url(self):
-		    """Returns the url to access a detail record for this book."""
-		    return reverse('detalle-producto', args=[str(self.id)])
+	
+	def __str__(self):
+		return f'{self.nombre}, {self.descripcion}'
+	
+	def get_absolute_url(self):
+		"""Returns the url to access a detail record for this book."""
+		return reverse('producto-detalles', args=[str(self.id)])
+			
