@@ -81,5 +81,12 @@ class MarcaDetalles(generic.DetailView):
 
     model = Marca
 
+class ProductoListView(generic.ListView):
+    model = Producto
+    
+
+
+    paginate_by = 10
+
 
     
