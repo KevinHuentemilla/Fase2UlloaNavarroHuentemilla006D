@@ -7,7 +7,8 @@ urlpatterns = [
         path('ropa_hombre/', views.ropa_hombre, name='ropa_hombre'),
         path('zapatilla_hombre/', views.zapatilla_hombre, name='zapatilla_hombre'),
         path('zapatilla_mujer/', views.zapatilla_mujer, name='zapatilla_mujer'),
-        path('accesorios', views.accesorios, name='accesorios'),
+        path('accesorios/', views.accesorios, name='accesorios'),
+        path('contacto/', views.contacto, name='contacto'),
         path('gg/<int:pk>', views.ProductoDetalles.as_view(), name='producto-detalles')
 
 ]
